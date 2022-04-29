@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kendea.com</title>
+  </head>
+  <body>
+    <a href="index.html"><h1 align="center">Kendea.comBlog</h1></a>
+    <table align="center">
+     <tr>
+       <td><a href="blog.html"><h1><font size="50"  color=”red”face="UD デジタル 教科書体 N-B">Blog</font></h1></td></a>
+       <td><a href="about.html"><h1><font size="50"  color=”red”face="UD デジタル 教科書体 N-B">About</font></h1></td></a>
+       <td><a href="Contact.html"><h1><font size="50"color=”red”face="UD デジタル 教科書体 N-B">Contact</font></h1></td></a>
+     </tr>
+   </table>
+   <script type="text/javascript">
+   function first() {
+      var user = prompt("ユーザー名を入力してください");
+      if (user==false || user== null) {
+        alert("ユーザー名を入力してください")
+        first();
+      }else{
+        document.title=user;
+      }
+      var pass=prompt("Welcom "+user+"様パスワードを入力してください")
+      var password="kendea1221"
+           if (pass==password) {
+        alert("ログインできました。")
+      }else{
+        alert("ログインできません")
+        first();
+      }
+   }
+   window.onload=first();
+ </script>
+    <style media="screen">
+      h1 {
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px black;
+  border-radius: 3px 0 3px 0;
+}
+
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px black;
+  border-radius: 50%;
+}
+
+h1:after {
+  top:-12px;
+  left:-12px;
+}
+h1:before {
+  bottom:-12px;
+  right:-12px;
+
+h1 { text-align: center }
+    </style>
+  </body>
+</html>
